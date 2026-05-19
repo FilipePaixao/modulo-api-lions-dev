@@ -18,10 +18,12 @@ O código principal está em `src/index.js`.
 
 ### Rotas disponíveis
 
-| Método | Rota     | Resposta              |
-|--------|----------|------------------------|
-| GET    | `/`      | `Hello World`          |
-| GET    | `/users` | `new users route`      |
+
+| Método | Rota     | Resposta          |
+| ------ | -------- | ----------------- |
+| GET    | `/`      | `Hello World`     |
+| GET    | `/users` | `new users route` |
+
 
 ---
 
@@ -55,6 +57,20 @@ cd modulo-api
 
 Se baixou um `.zip`, extraia a pasta e abra o terminal dentro dela.
 
+> **Observação — commits no repositório do professor**  
+> Este repositório é **somente leitura** para os alunos. **Não será possível** enviar (`push`) commits das suas alterações para o repositório original da LionsDev/professor — você não tem permissão de escrita nele.  
+> Para versionar o seu trabalho no GitHub, escolha uma das opções abaixo:
+>
+> - **Fork:** no GitHub, use *Fork* no repositório oficial e clone **o seu fork**. Os commits vão para a sua conta.
+> - **Repositório próprio:** crie um repositório vazio na sua conta e altere a origem remota do clone local:
+>   ```bash
+>   git remote -v
+>   git remote set-url origin https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
+>   git push -u origin main
+>   ```
+>
+> Ajuste o nome da branch (`main` ou `master`) conforme o seu repositório.
+
 ### 2. Instalar as dependências
 
 Na raiz do projeto (onde está o `package.json`):
@@ -81,8 +97,8 @@ Server is running on port 3000
 
 Abra no navegador:
 
-- http://localhost:3000/
-- http://localhost:3000/users
+- [http://localhost:3000/](http://localhost:3000/)
+- [http://localhost:3000/users](http://localhost:3000/users)
 
 Ou use o `curl` no terminal:
 
@@ -112,9 +128,11 @@ modulo-api/
 
 ## Scripts disponíveis
 
-| Comando      | Descrição                                      |
-|--------------|------------------------------------------------|
-| `npm start`  | Sobe o servidor com Nodemon em `src/index.js`  |
+
+| Comando     | Descrição                                     |
+| ----------- | --------------------------------------------- |
+| `npm start` | Sobe o servidor com Nodemon em `src/index.js` |
+
 
 ---
 
