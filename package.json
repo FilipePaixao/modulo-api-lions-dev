@@ -1,0 +1,13 @@
+{
+  "name": "modulo-api",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.22.2",
+    "nodemon": "^3.1.14"
+  },
+  "scripts": {
+    "start": "nodemon ./src/index.js"
+  }
+}
