@@ -1,19 +1,31 @@
 import express from "express";
+import logMiddleware from "./middleware/logger.js";
 
 const app = express();
 
 const port = 3000;
 
+app.use(express.json());
+app.use(logMiddleware);
 
 app.get("/", (req, res) => {
   res.send(" Hello World ");
 });
 
-
 app.get("/users", (req, res) => {
   res.send("new users route");
 });
 
+app.post("/users", (req, res) => {
+  const body = req.body;
+
+  if (body.ativo) {
+    res.status(201).json({ ...body, id: Date.now() });
+  } else {
+    res.status(400).send("Verifique os dados enviados");
+  }
+  
+});
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
