@@ -1,6 +1,6 @@
 import express from "express";
 import logMiddleware from "./middleware/logger.js";
-
+import createUser from "./createUser.js";
 const app = express();
 
 const port = 3000;
@@ -18,13 +18,8 @@ app.get("/users", (req, res) => {
 
 app.post("/users", (req, res) => {
   const body = req.body;
-
-  if (body.ativo) {
-    res.status(201).json({ ...body, id: Date.now() });
-  } else {
-    res.status(400).send("Verifique os dados enviados");
-  }
-  
+  const newUser = createUser(body);
+  res.status(201).json(newUser);
 });
 
 app.listen(port, () => {
