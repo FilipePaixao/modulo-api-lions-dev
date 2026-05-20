@@ -1,5 +1,4 @@
-import users from "./data/userdata.js";
-
+import users from "../data/userdata.js";
 export default function createUser(body) {
     const newUser = {
         id: Date.now(),
